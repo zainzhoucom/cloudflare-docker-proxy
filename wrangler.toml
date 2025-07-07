@@ -7,23 +7,23 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "libcuda.so"
+CUSTOM_DOMAIN = "zainzhou.com"
 
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "exmaple.com"
+CUSTOM_DOMAIN = "zainzhou.com"
 
 [env.production]
 name = "cloudflare-docker-proxy"
 routes = [
-  { pattern = "docker.mydomain.com", custom_domain = true },
-  { pattern = "quay.mydomain.com", custom_domain = true },
-  { pattern = "gcr.mydomain.com", custom_domain = true },
-  { pattern = "k8s-gcr.mydomain.com", custom_domain = true },
-  { pattern = "k8s.mydomain.com", custom_domain = true },
-  { pattern = "ghcr.mydomain.com", custom_domain = true },
-  { pattern = "cloudsmith.mydomain.com", custom_domain = true },
+  { pattern = "docker.zainzhou.com", custom_domain = true },
+  { pattern = "quay.zainzhou.com", custom_domain = true },
+  { pattern = "gcr.zainzhou.com", custom_domain = true },
+  { pattern = "k8s-gcr.zainzhou.com", custom_domain = true },
+  { pattern = "k8s.zainzhou.com", custom_domain = true },
+  { pattern = "ghcr.zainzhou.com", custom_domain = true },
+  { pattern = "cloudsmith.zainzhou.com", custom_domain = true },
 ]
 
 [env.production.vars]
@@ -32,7 +32,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.mydomain.com", custom_domain = true }
+route = { pattern = "docker-staging.zainzhou.com", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
